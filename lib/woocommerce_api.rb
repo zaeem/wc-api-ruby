@@ -107,7 +107,7 @@ module WooCommerce
     #
     # Returns the endpoint String.
     def get_url endpoint, method
-      api = @wp_api ? 'wp-json/wc' : 'wc-api'
+      api = @wp_api ? 'wp-json' : 'wc-api'
       url = @url
       url = "#{url}/" unless url.end_with? "/"
       url = "#{url}#{api}/#{@version}/#{endpoint}"
